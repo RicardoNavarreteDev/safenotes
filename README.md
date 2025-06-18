@@ -66,6 +66,8 @@ Vulnerabilidades 46.
 Reporte:
 start reports/dependency-check-report.html
 
+---
+
 
 🕵️ Escaneo de seguridad con OWASP ZAP
 🔄 Pasos realizados
