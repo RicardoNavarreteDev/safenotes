@@ -57,11 +57,13 @@ safenotes/
 
 🔍 Análisis con OWASP Dependency-Check
 Esta herramienta escanea tus dependencias en package.json y node_modules para detectar CVEs conocidos.
+![Dependency Check](images/dependency-check.png)
 
 ✅ Resultado
-Se detectaron 7 vulnerabilidades (1 baja, 6 altas).
-Se generó un reporte HTML en la carpeta reports/.
-Puedes abrirlo en Jenkins o directamente como:
+Se escanearon 178 dependencias.
+Dependencias vulvenrables 9.
+Vulnerabilidades 46.
+Reporte:
 start reports/dependency-check-report.html
 
 
@@ -78,7 +80,6 @@ Encabezados de seguridad faltantes.
 Cookies sin atributos HttpOnly o Secure.
 Posibles vectores de inyección.
 
-![Dependency Check](images/dependency-check.png)
 
 ---
 
