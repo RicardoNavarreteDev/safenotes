@@ -55,8 +55,6 @@ safenotes/
 
 ---
 
-🧪 Jenkins: CI/CD Pipeline
-
 🔍 Análisis con OWASP Dependency-Check
 Esta herramienta escanea tus dependencias en package.json y node_modules para detectar CVEs conocidos.
 
@@ -79,6 +77,8 @@ Ejecutar análisis activo.
 Encabezados de seguridad faltantes.
 Cookies sin atributos HttpOnly o Secure.
 Posibles vectores de inyección.
+
+![Dependency Check](imges/dependency-check.png)
 
 ---
 
