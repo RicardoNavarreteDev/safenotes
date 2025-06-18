@@ -78,7 +78,7 @@ Encabezados de seguridad faltantes.
 Cookies sin atributos HttpOnly o Secure.
 Posibles vectores de inyección.
 
-![Dependency Check](imges/dependency-check.png)
+![Dependency Check](images/dependency-check.png)
 
 ---
 
