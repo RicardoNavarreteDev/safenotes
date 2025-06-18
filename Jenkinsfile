@@ -16,7 +16,7 @@ pipeline {
 
         stage('Dependency Check') {
             steps {
-                // Ajusta la ruta si no tienes dependency-check en el PATH
+                // Ajusta la ruta si no tienes dependency-check en el PATHe
                 bat '"C:\\Program Files\\dependency-check\\bin\\dependency-check.bat" --project "SafeNotes" --scan . --format HTML --out reports'
             }
         }
