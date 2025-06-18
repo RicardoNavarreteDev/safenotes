@@ -1,0 +1,38 @@
+pipeline {
+    agent any
+
+    environment {
+        PROJECT_NAME = "SafeNotes"
+    }
+
+    stages {
+        stage('Instalar dependencias') {
+            steps {
+                sh 'npm install'
+            }
+        }
+
+        stage('Ejecutar pruebas') {
+            steps {
+                sh 'npm test'
+            }
+        }
+
+        stage('Análisis de vulnerabilidades') {
+            steps {
+                sh '''
+                    dependency-check --project "${PROJECT_NAME}" \
+                    --scan . \
+                    --format HTML \
+                    --out dependency-check-report
+                '''
+            }
+        }
+    }
+
+    post {
+        always {
+            archiveArtifacts artifacts: 'dependency-check-report/**', allowEmptyArchive: true
+        }
+    }
+}
