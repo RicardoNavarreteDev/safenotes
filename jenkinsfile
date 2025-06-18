@@ -1,38 +1,30 @@
 pipeline {
     agent any
 
-    environment {
-        PROJECT_NAME = "SafeNotes"
-    }
-
     stages {
-        stage('Instalar dependencias') {
+        stage('Install dependencies') {
             steps {
-                sh 'npm install'
+                bat 'npm install'
             }
         }
 
-        stage('Ejecutar pruebas') {
+        stage('Run tests') {
             steps {
-                sh 'npm test'
+                bat 'npm test'
             }
         }
 
-        stage('Análisis de vulnerabilidades') {
+        stage('Dependency Check') {
             steps {
-                sh '''
-                    dependency-check --project "${PROJECT_NAME}" \
-                    --scan . \
-                    --format HTML \
-                    --out dependency-check-report
-                '''
+                // Ajusta la ruta si no tienes dependency-check en el PATH
+                bat '"C:\\Program Files\\dependency-check\\bin\\dependency-check.bat" --project "SafeNotes" --scan . --format HTML --out reports'
             }
         }
     }
 
     post {
         always {
-            archiveArtifacts artifacts: 'dependency-check-report/**', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'reports\\*.html', allowEmptyArchive: true
         }
     }
 }
