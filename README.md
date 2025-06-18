@@ -66,6 +66,33 @@ Vulnerabilidades 46.
 Reporte:
 start reports/dependency-check-report.html
 
+Dependencias con vulnerabilidades detectadas
+Durante el análisis de seguridad realizado con Dependency-Check, se identificaron vulnerabilidades en las siguientes dependencias de nuestro proyecto:
+
+connect versión 2.6.0 (7 vulnerabilidades, severidad media)
+
+cookie versión 0.0.4 (2 vulnerabilidades, severidad media)
+
+express versión 3.0.0 (9 vulnerabilidades, severidad alta)
+
+fresh versión 0.1.0 (2 vulnerabilidades, severidad alta)
+
+jquery.js versión 1.6.2 (8 vulnerabilidades, severidad media)
+
+mime versión 1.2.6 (2 vulnerabilidades, severidad alta)
+
+qs versión 0.5.1 (7 vulnerabilidades, severidad alta)
+
+send versiones 0.0.4 y 0.1.0 (6 y 3 vulnerabilidades, severidad alta)
+
+Versiones recomendadas para actualizar
+Se recomienda actualizar todas las dependencias vulnerables a sus versiones más recientes y mantenidas para garantizar la seguridad y estabilidad del proyecto. En particular:
+express debe actualizarse a la última versión estable (actualmente 4.x o superior), ya que la versión 3.0.0 es obsoleta y contiene múltiples vulnerabilidades críticas.
+
+jquery debe actualizarse a la versión 3.x o superior para corregir vulnerabilidades conocidas.
+
+Para las demás dependencias (connect, cookie, fresh, mime, qs y send), es recomendable revisar y actualizar a las versiones más recientes disponibles en sus respectivos repositorios oficiales o en npm, asegurándose de que no contengan vulnerabilidades reportadas.
+
 ---
 
 
